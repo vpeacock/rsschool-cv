@@ -1,5 +1,6 @@
-#Altukhova Valentina
-***
+# Altukhova Valentina
+
+****
 
 **Location:**  Kazakhstan, Shymkent
 
@@ -20,7 +21,7 @@ email: mariaiscus1@gmail.com
 * Photoshop
 
 **Code example:**
-```
+```sh
 function digitize(n) {
   let numArr = Array.from('' + n)
   return numArr.map(function (num) {
