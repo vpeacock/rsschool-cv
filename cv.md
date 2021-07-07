@@ -3,10 +3,13 @@
 **Location:**  Kazakhstan, Shymkent
 
 **Contacts:**
-phone: +7 7054377200<br/>
-email: mariaiscus1@gmail.com<br/>
-[This is a link to my **twitter.com**](https://twitter.com/CC5dGF2eppWbmLD)<br/>
-[This is a link to my **github**](https://github.com/vpeacock)<br/>
+phone: +7 7054377200
+
+email: mariaiscus1@gmail.com
+
+[This is a link to my **twitter.com**](https://twitter.com/CC5dGF2eppWbmLD)
+
+[This is a link to my **github**](https://github.com/vpeacock)
 
 **Information about me:** I enjoy exploring technologies that allow a huge number of creative ideas to be realized. My goal is to gain more confident skills and knowledge that will help me realize my dream - to become a confident developer in my knowledge. I hope my dedication and perseverance will help me with this. No work experience, but there is a desire and aspiration to find a job.
 
