@@ -1,4 +1,4 @@
-#Altukhova Valentina#
+#Altukhova Valentina
 ***
 
 **Location:**  Kazakhstan, Shymkent
