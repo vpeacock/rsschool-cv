@@ -29,3 +29,12 @@ function digitize(n) {
 }
 digitize(35231)
 ```
+
+**Education:**
+
+* Yandex  Praktikum - *[Profession web developer](https://praktikum.yandex.ru/web)*,
+* Youtube Сhannel - *[Web development lessons from 0 to 10](https://www.youtube.com/channel/UCE_w6FxGfRKH2fU76raVeog)*
+* Youtube Сhannel - *[Freelancer for Life - IT and Freelance](https://www.youtube.com/channel/UCedskVwIKiZJsO8XdJdLKnA)*
+* Youtube Сhannel - *[Vladilen Minin](https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw)*
+
+**English level:** A1, I am at the stage of further education
