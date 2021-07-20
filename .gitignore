@@ -203,4 +203,9 @@ dist
 .history
 .ionide
 
+#linters
+.htmlhintrc
+.stylelintrc
+
+
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node,images
