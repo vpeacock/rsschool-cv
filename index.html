@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CV-task</title>
+</head>
+
+<body class="container">
+
+    <header class="header">
+        <h1 class="header-title">Curriculum vitae</h1>
+        <div class="header-logo">
+            <a href="#" class="header-link">
+                <img class="header-logo" src="/images/cv_logo.png" alt="logo" width="150" height="150">
+            </a>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="photo">
+            <img class="photo-img" src="/images/my-foto.jpg" alt="My photo" width="100" height="100">
+            <h2 class="photo-title ">Altukhova Valentina</h2>
+        </section>
+
+        <section class="communication">
+            <h3 class="communication-location">
+                <span class="bold-text medium-header ">Location:</span><span class="country">Kazakhstan,
+          Shymkent</span>
+            </h3>
+            <h3 class="communication-contacts medium-header" title="Contacts to contact me">Contacts:</h3>
+
+            <address>
+            <ul class="communication-lists">
+                <li class="communication-item"><span class="bold-text">phone:</span> +7 7054377200</li>
+                <li class="communication-item"><span class="bold-text">email:</span> mariaiscus1@gmail.com
+                </li>
+                <li class="communication-item"> <a class="communication-link" href="https://twitter.com/CC5dGF2eppWbmLD">This is
+            a link to my twitter.com</a></li>
+                <li class="communication-item"><a class="communication-link" href="https://github.com/vpeacock">This is a link
+            to my github</a> </li>
+            </ul>        
+            </address>
+        </section>
+
+        <section class="about">
+            <h2 class="about-title">Altukhova Valentina</h2>
+            <p class="about-subtitle">Junior developer</p>
+            <div class="about-information">
+                <p class="about-text"> I enjoy exploring technologies that allow a huge number of creative ideas to be realized. My goal is to gain more confident skills and knowledge that will help me realize my dream - to become a confident developer in my knowledge. I hope
+                    my dedication and perseverance will help me with this. No work experience, but there is a desire and aspiration to find a job.</p>
+
+                <article class="skills">
+                    <h3 class="skills-title medium-header">Skills:</h3>
+                    <ul class="skills-lists">
+                        <li class="skills-item">html</li>
+                        <li class="skills-item">css</li>
+                        <li class="skills-item">javascript</li>
+                        <li class="skills-item">git</li>
+                        <li class="skills-item">figma</li>
+                        <li class="skills-item">photoshop</li>
+                    </ul>
+                </article>
+
+                <article class="education">
+                    <h3 class="education-title medium-header">Education:</h3>
+                    <ul class="education-lists">
+                        <li class="education-item">
+                            <a class="education-link" href="https://praktikum.yandex.ru/web">Yandex
+                Praktikum - Profession web
+                developer</a>
+                        </li>
+                        <li class="education-item">
+                            <a class="education-link" href="https://www.youtube.com/channel/UCE_w6FxGfRKH2fU76raVeog">Youtube
+                Сhannel - Web development lessons
+                from 0 to 10</a>
+                        </li>
+                        <li class="education-item">
+                            <a class="education-link" href="https://www.youtube.com/channel/UCedskVwIKiZJsO8XdJdLKnA">Youtube
+                Сhannel - Freelancer for Life - IT
+                and Freelance</a>
+                        </li>
+                        <li class="education-item">
+                            <a class="education-link " href="https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw">Youtube
+                Сhannel - Vladilen Minin</a>
+                        </li>
+                    </ul>
+                    <p class="education-language">
+                        <span class="bold-text medium-header">English level:</span> A1, I am at the stage of further education.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="code">
+            <h3 class="code-title medium-header">Code example:</h3>
+            <pre class="code-formatting"><code class="code-example">
+        function digitize(n) {
+          let numArr = Array.from('' + n)
+          return numArr.map(function (num) {
+            return Number(num)
+          }).reverse()
+        }
+        digitize(35231)
+      </code>
+    </pre>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <address class="footer-contacts">
+      <ul class="footer-list">
+        <li>
+          <a class="footer-link" href="https://rs.school/js/ ">
+            <img class="footer-rss" alt="Rss-logo" src="images/rs_school_js.svg" width="100" height="100">
+          </a>
+        </li>
+        <li>
+          <p class="footer-year">2021</p>
+        </li>
+        <li>
+          <a class="footer-link" href="https://github.com/vpeacock">
+            <img class="footer-githab" src="/images/octocat.png" alt="Github logo" width="150" height="200">
+          </a>
+        </li>
+      </ul>
+    </address>
+    </footer>
+</body>
+
+</html>
