@@ -16,6 +16,14 @@
 
 body {
   margin: 0 auto;
+  background-image: url('./images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* roboto-regular - latin */
@@ -144,6 +152,8 @@ html {
   color: var(--white);
 }
 
+/* __header start */
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -192,6 +202,36 @@ html {
 .header-item {
   padding-right: 10px;
 }
+
+.header-burger {
+  display: none;
+  width: 40px;
+  height: 28px;
+  position: relative;
+}
+
+.burger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: var(--white);
+  left: 0;
+}
+
+.burger-line_first {
+  top: 0;
+}
+
+.burger-line_second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-line_third {
+  bottom: 0;
+}
+
 
 /* __header end */
 
@@ -244,6 +284,7 @@ html {
   font-size: 22px;
   line-height: 38px;
   text-align: left;
+  margin: 25px;
 }
 
 /* __about end */
@@ -274,6 +315,7 @@ html {
   font-weight: 300;
   font-size: 22px;
   line-height: 26px;
+  word-wrap: break-word;
 }
 
 .communication-link {
@@ -400,10 +442,7 @@ html {
 
 .education-lists {
   margin-top: 25px;
-  font-size: 20px;
-  line-height: 26px;
   text-align: left;
-  list-style-type: none;
   min-height: 200px;
   display: flex;
   flex-direction: column;
@@ -417,10 +456,10 @@ html {
   line-height: 16px;
   margin-bottom: 45px;
   border-radius: 15px;
-  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  list-style-type: none;
 }
 
 .education-link {
@@ -429,8 +468,8 @@ html {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 22px;
+  line-height: 38px;
 }
 
 .education-title {
@@ -445,8 +484,8 @@ html {
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 22px;
+  line-height: 38px;
   display: flex;
   align-items: center;
 }
@@ -465,7 +504,7 @@ html {
 }
 
 .code-example {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .code-formatting {
@@ -519,8 +558,13 @@ html {
   font-size: 22px;
   line-height: 26px;
   color: var(--black);
-  margin: 20px 0;
+  margin: 45px 0;
   text-align: center;
+}
+
+.projects-img-title:hover {
+  color: var(--subtitle-bg);
+  transition: .5s;
 }
 
 .img-wrapper {
@@ -590,6 +634,10 @@ html {
 }
 
 @media screen and (max-width: 1150px) {
+  .container-separator {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
   .main-title {
     font-size: 35px;
   }
@@ -600,23 +648,27 @@ html {
     font-size: 20px;
     line-height: 22px;
   }
-  .skills {
-    padding: 10px;
-  }
   .about-title {
     font-size: 35px;
     line-height: 40px;
   }
-
   .education {
     padding: 0 50px;
   }
 }
 
 @media screen and (max-width: 992px) {
+  .container-separator {
+    display: flex;
+    flex-direction: column;
+  }
+  .code-example {
+    font-size: 22px;
+    line-height: 30px;
+  }
   .communication-item {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 24px;
   }
   .skills-lists {
     font-size: 14px;
@@ -624,25 +676,108 @@ html {
     display: flex;
     flex-direction: column;
   }
-
   .skills-item {
     font-size: 20px;
     line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-
   .education {
     padding: 0 30px;
   }
+  .communication-ico-area {
+    background-size: 15px 15px;
+  }
+  .projects-img {
+    width: 100%;
+    height: auto;
+  }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+.header-burger {
+  display: block;
+  cursor: pointer;
+}
+.header-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background-color: var(--subtitle-bg);
+  z-index: 10;
+  padding: 75px;
+  transform: translateX(100%);
+  transition: .5s all linear;
+}
+
+.header-menu_active {
+  transform: translateX(0);
+}
+
+.header-menu-item {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
+.header-menu-item:last-child {
+  margin-bottom: 0;
+}
+
+.header-menu-link {
+  font-size: 42px;
+  line-height: 48px;
+}
+
+.header-menu-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top:20px;
+  right: 20px;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.header-menu-close-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  position: absolute;
+  top:50%;
+ 
+}
+
+.header-menu-close-line:first-child {
+  transform:translateY(-50%) rotate(45deg);
+}
+
+.header-menu-close-line:last-child {
+  transform:translateY(-50%) rotate(-45deg);
+}
+
+.header-container {
+  flex-direction: row;
+}
+
 }
 
 @media screen and (max-width: 480px) {
   .communication-item {
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 5px;
+    line-height: 8px;
   }
   .subtitle {
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 12px;
+    line-height: 14px;
     text-decoration: none;
   }
   .skills {
@@ -656,10 +791,9 @@ html {
     font-size: 18px;
     line-height: 22px;
   }
-
   .skills-item {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 14px;
   }
   .middle-dark-section {
     padding-left: 5px;
@@ -668,27 +802,52 @@ html {
   .about-text {
     font-size: 16px;
     line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
-
   .education {
     padding: 0 10px;
   }
   .education-link {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
   }
-
   .education-language {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
   }
-
   .code-example {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 14px;
+    line-height: 18px;
   }
-
   .communication-ico {
     background-size: 10px 10px;
+    padding-left: 20px;
+  }
+  .projects-img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .footer-rss {
+    width: 70px;
+  }
+  .footer-year {
+    font-size: 16px;
+  }
+  .footer-githab {
+    width: 70px;
+  }
+  .communication-item {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .about {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
