@@ -470,7 +470,34 @@ html {
   font-weight: 300;
   font-size: 22px;
   line-height: 38px;
+  position: relative;
+  cursor: pointer;
 }
+
+.education-link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background-color: var(--main-bg-light);
+  transition: width 0.5s;
+}
+
+.education-link:hover:after {
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  background-color: var(--subtitle-bg);
+  transition: width 0.5s;
+}
+
 
 .education-title {
   margin-bottom: 35px;
@@ -768,6 +795,11 @@ html {
   flex-direction: row;
 }
 
+.main-title {
+  font-size: 30px;
+  line-height: 35px;
+}
+
 }
 
 @media screen and (max-width: 480px) {
@@ -849,5 +881,14 @@ html {
   .container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .header-logo {
+    width: 50px;
+  }
+
+  .main-title {
+    font-size: 23px;
+    line-height: 25px;
   }
 }
