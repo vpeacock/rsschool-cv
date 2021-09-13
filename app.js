@@ -1,20 +1,54 @@
 (function () {
-  const burger = document.querySelector(".burger");
-  const menu = document.querySelector(".header-menu");
-  const menuClose = document.querySelector(".header-menu-close");
-  const menuLinks = document.querySelectorAll(".header-menu-link");
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.header-menu');
+  const menuClose = document.querySelector('.header-menu-close');
+  const menuLinks = document.querySelectorAll('.header-menu-link');
   const menuLinksArr = Array.from(menuLinks);
-  burger.addEventListener("click", () => {
-    menu.classList.add("header-menu_active");
+  burger.addEventListener('click', () => {
+    menu.classList.add('header-menu_active');
   });
-  menuClose.addEventListener("click", () => {
-    menu.classList.remove("header-menu_active");
+  menuClose.addEventListener('click', () => {
+    menu.classList.remove('header-menu_active');
   });
   if (window.innerWidth <= 767) {
     for (let link of menuLinksArr) {
-      link.addEventListener("click", () => {
-        menu.classList.remove("header-menu_active");
+      link.addEventListener('click', () => {
+        menu.classList.remove('header-menu_active');
       });
     }
   }
 })();
+
+console.log(`
+1. вёрстка валидная +10;
+2. вёрстка семантическая +20;
+  Cемантические теги:
+    1. header - 2 балла
+    2. main  - 2 балла
+    3. footer - 2 балла
+    4. section - 2 балла
+    5. article - 2 балла
+    6. nav - 2 балла
+    7. figure - 2 балла
+    8. figcaption - 2 балла
+    9. time - 2 балла
+    10. mark - 2 балла
+  Заголовки:
+    1. h1 - 2 балла
+    2. h2 - 2 балла
+    3. h3 - 2 балла
+  Итого: 26 баллов
+3. для оформления СV используются css-стили +10;
+4. контент размещается в блоке, который горизонтально центрируется на странице. Фоновый цвет, если он есть, тянется во всю ширину страницы +10;
+5. вёрстка адаптивная: ни на одном из разрешений экрана до 320px включительно не появляется горизонтальная полоса прокрутки, при этом всё содержание страницы сохраняется +10;
+6. есть меню. Ссылки в пунктах меню ведут на основные разделы CV. При кликах по пунктам меню реализована плавная прокрутка по якорям. При уменьшении ширины экрана меню становится адаптивным.;
+7. на странице СV присутствует изображение - фото или аватарка автора CV, пропорции изображения не искажены, у изображения есть атрибут alt;
+8. контакты для связи и перечень навыков оформлены в виде списка ul > li +10;
+9. CV содержит контакты для связи, краткую информацию о себе, перечень навыков, информацию об образовании и уровне английского +10;
+10. CV содержит пример вашего кода  с подсветкой кода. Для подсветки кода может использоваться js-библиотека, например, highlight.js +10;
+11. CV содержит изображения-ссылки на выполненные вами проекты. При клике по изображению страница проекта открывается в новой вкладке. У каждого проекта есть название, небольшое описание, указан перечень используемых технологий. +10;
+12. CV выполнено на английском языке +10;
+13. выполнены требования к Pull Request: есть ссылка на задание, скриншот страницы СV, ссылка на деплой страницы CV на GitHub Pages, выполнена самооценка +10;
+14. дизайн, оформление, качество выполнения CV не ниже чем в примерах CV, приведённых в материалах к заданию +10;
+  Итого: 150 баллов 
+`)
