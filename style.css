@@ -26,6 +26,10 @@ body {
   background-size: cover;
 }
 
+.hide {
+  display: none;
+}
+
 /* roboto-regular - latin */
 
 @font-face {
@@ -163,9 +167,16 @@ html {
 
 .header-logo {
   background-color: var(--white);
-  width: 150px;
+  width: 100px;
   height: auto;
   border-radius: 100%;
+}
+
+.header-logo:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: .5s;
 }
 
 .header-menu-lists {
@@ -230,6 +241,9 @@ html {
 
 .burger-line_third {
   bottom: 0;
+}
+mark {
+  background-color: transparent;
 }
 
 
@@ -624,13 +638,27 @@ html {
 }
 
 .footer-githab {
+  width: 100px;
+  height: auto;
+}
+
+.footer-githab:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: .5s;
+}
+
+.footer-rss {
   width: 150px;
   height: auto;
 }
 
-.footer-rss {
-  width: 200px;
-  height: auto;
+.footer-rss:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: .5s;
 }
 
 .footer-year {
