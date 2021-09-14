@@ -177,6 +177,7 @@ html {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
   transition: .5s;
+
 }
 
 .header-menu-lists {
@@ -242,10 +243,10 @@ html {
 .burger-line_third {
   bottom: 0;
 }
+
 mark {
   background-color: transparent;
 }
-
 
 /* __header end */
 
@@ -265,6 +266,10 @@ mark {
   height: auto;
   border-radius: 100%;
   object-fit: cover;
+
+}
+.about-img:hover {
+border: 4px solid var(--white);
 }
 
 .about-title {
@@ -512,7 +517,6 @@ mark {
   transition: width 0.5s;
 }
 
-
 .education-title {
   margin-bottom: 35px;
 }
@@ -567,6 +571,7 @@ mark {
 
 .projects {
   padding-top: 35px;
+  padding-bottom: 35px;
   background-color: var(--main-bg-dark);
 }
 
@@ -592,18 +597,45 @@ mark {
   line-height: 21px;
 }
 
-.projects-img-title {
+.projects-title {
   font-family: Roboto;
   font-style: normal;
-  font-weight: 200;
+  font-weight: 500;
   font-size: 22px;
   line-height: 26px;
   color: var(--black);
-  margin: 45px 0;
+  margin: 50px 0 20px 0;
   text-align: center;
 }
 
-.projects-img-title:hover {
+.projects-description {
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--black);
+  border: 1px solid var(--subtitle-bg);
+  padding: 20px;
+}
+
+.projects-lists {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-desc-item {
+  padding-right: 10px;
+}
+
+.projects-desc-item:last-child {
+  padding-right: 0;
+}
+
+.projects-title:hover {
   color: var(--subtitle-bg);
   transition: .5s;
 }
@@ -620,6 +652,16 @@ mark {
 
 .projects-img:hover {
   transform: scale(1.2);
+}
+
+.projects-technology {
+  margin-bottom: 15px;
+}
+
+.technology-mark {
+  background-color: var(--main-dark);
+  color:var(--white);
+  padding: 7px;
 }
 
 /* projects end */
@@ -659,6 +701,8 @@ mark {
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   transition: .5s;
+  background-color: #ffd541;
+  padding: 5px;
 }
 
 .footer-year {
@@ -755,79 +799,67 @@ mark {
 }
 
 @media screen and (max-width: 767px) {
-.header-burger {
-  display: block;
-  cursor: pointer;
-}
-.header-menu {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top:0;
-  left:0;
-  background-color: var(--subtitle-bg);
-  z-index: 10;
-  padding: 75px;
-  transform: translateX(100%);
-  transition: .5s all linear;
-}
-
-.header-menu_active {
-  transform: translateX(0);
-}
-
-.header-menu-item {
-  width: 100%;
-  margin-right: 0;
-  margin-bottom: 30px;
-}
-
-.header-menu-item:last-child {
-  margin-bottom: 0;
-}
-
-.header-menu-link {
-  font-size: 42px;
-  line-height: 48px;
-}
-
-.header-menu-close {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top:20px;
-  right: 20px;
-  z-index: 11;
-  cursor: pointer;
-}
-
-.header-menu-close-line {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background-color: var(--white);
-  position: absolute;
-  top:50%;
- 
-}
-
-.header-menu-close-line:first-child {
-  transform:translateY(-50%) rotate(45deg);
-}
-
-.header-menu-close-line:last-child {
-  transform:translateY(-50%) rotate(-45deg);
-}
-
-.header-container {
-  flex-direction: row;
-}
-
-.main-title {
-  font-size: 30px;
-  line-height: 35px;
-}
-
+  .header-burger {
+    display: block;
+    cursor: pointer;
+  }
+  .header-menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--subtitle-bg);
+    z-index: 10;
+    padding: 75px;
+    transform: translateX(100%);
+    transition: .5s all linear;
+  }
+  .header-menu_active {
+    transform: translateX(0);
+  }
+  .header-menu-item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .header-menu-item:last-child {
+    margin-bottom: 0;
+  }
+  .header-menu-link {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .header-menu-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+    cursor: pointer;
+  }
+  .header-menu-close-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--white);
+    position: absolute;
+    top: 50%;
+  }
+  .header-menu-close-line:first-child {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .header-menu-close-line:last-child {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .header-container {
+    flex-direction: row;
+  }
+  .main-title {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -910,11 +942,9 @@ mark {
     padding-left: 10px;
     padding-right: 10px;
   }
-
   .header-logo {
     width: 50px;
   }
-
   .main-title {
     font-size: 23px;
     line-height: 25px;
