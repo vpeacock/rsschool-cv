@@ -1521,5 +1521,10 @@ code::after {
         grid-template-columns: 1fr;
     }
 
+    .parallax {
+        height: 200px;
+        background-position: 52%;
+    }
+
 
 }
