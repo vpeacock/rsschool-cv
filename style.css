@@ -114,7 +114,7 @@ button {
 
 li {
     list-style-type: none;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 a {
@@ -869,6 +869,11 @@ code::after {
 }
 
 .projects-container-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
     list-style-type: none;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
@@ -920,6 +925,58 @@ code::after {
     gap: 16px;
 }
 
+.proj-collab-text-container {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 100%;
+    padding: 15px 5px;
+    text-align: center;
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 38px;
+    transition: .5s;
+}
+
+.proj-collab-text-link {
+    color: var(--main-bg-dark);
+    transition: .5s;
+}
+
+.proj-collab-text-link:hover {
+    color: var(--btn-light-hover);
+}
+
+.github-collab-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: 0.7s;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 38px;
+    color: var(--main-bg-dark);
+}
+
+.github-collab-link::before {
+    display: block;
+    content: "";
+    width: 28px;
+    height: 28px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("./assets/img/github-black.png");
+}
+
 .projects-desc-item {
     padding-right: 10px;
 }
@@ -944,8 +1001,6 @@ code::after {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     width: 100%;
-
-
 }
 
 .projects-img {
@@ -954,7 +1009,7 @@ code::after {
     border-radius: 16px;
     width: 100%;
     height: auto;
-    aspect-ratio: 3/2;
+    aspect-ratio: 2/1;
     object-fit: cover;
     object-position: center;
 }
